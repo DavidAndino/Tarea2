@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nota1TextBox = new System.Windows.Forms.TextBox();
@@ -41,9 +42,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.calcularButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -159,31 +159,15 @@
             this.calcularButton.UseVisualStyleBackColor = true;
             this.calcularButton.Click += new System.EventHandler(this.calcularButton_Click);
             // 
-            // dataGridView1
+            // errorProvider1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 423);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(514, 150);
-            this.dataGridView1.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(262, 376);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Registro";
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 594);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(593, 354);
             this.Controls.Add(this.calcularButton);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label7);
@@ -201,7 +185,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,8 +206,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Button calcularButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

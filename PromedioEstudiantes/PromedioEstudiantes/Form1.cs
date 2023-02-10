@@ -19,16 +19,47 @@ namespace PromedioEstudiantes
 
         private async void calcularButton_Click(object sender, EventArgs e)
         {
+            //Validando que no haya campos vacios
+            if (nameTextBox.Text == "")
+            {
+                errorProvider1.SetError(nameTextBox, "No puede dejar este campo vacío");
+                return;
+            }
+            errorProvider1.Clear();
+            if (nota1TextBox.Text == "")
+            {
+                errorProvider1.SetError(nota1TextBox, "No puede dejar este campo vacío");
+                return;
+            }
+
+            if (nota2TextBox.Text == "")
+            {
+                errorProvider1.SetError(nota2TextBox, "No puede dejar este campo vacío");
+                return;
+            }
+
+            if (nota3TextBox.Text == "")
+            {
+                errorProvider1.SetError(nota3TextBox, "No puede dejar este campo vacío");
+                return;
+            }
+
+            if (nota4TextBox.Text == "")
+            {
+                errorProvider1.SetError(nota4TextBox, "No puede dejar este campo vacío");
+                return;
+            }
+
+            //quitando advertencia luego que el usuario ingrese el dato necesario en las cajas de texto luego de haber validado
+            errorProvider1.Clear();
+
             //creando e inicializando variables
             string nombre = nameTextBox.Text;
             int nota1 = Convert.ToInt32(nota1TextBox.Text), nota2 = Convert.ToInt32(nota2TextBox.Text), nota3 = Convert.ToInt32(nota3TextBox.Text),
                 nota4 = Convert.ToInt32(nota4TextBox.Text);
-
-            //creando variable de media e inicializandola con el valor que devuelve la funcino asincrona
-            int media = await promedioAsync(nota1, nota2, nota3, nota4);
-            MessageBox.Show($"El promedio es: {media}");
-
-
+          
+            //Imprimiendo resultado obtenido por  medio de un Message.Box con la llamada de la funcion asincronica
+            MessageBox.Show("El promedio de " + nombre + $" es {await  promedioAsync(nota1, nota2, nota3, nota4)}");
 
         }
         //creando funcion asincrona
