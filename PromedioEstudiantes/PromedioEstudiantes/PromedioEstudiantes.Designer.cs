@@ -1,6 +1,6 @@
 ﻿namespace PromedioEstudiantes
 {
-    partial class Form1
+    partial class PromedioEstudiantes
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -74,6 +74,7 @@
             this.nota1TextBox.Name = "nota1TextBox";
             this.nota1TextBox.Size = new System.Drawing.Size(30, 26);
             this.nota1TextBox.TabIndex = 2;
+            this.nota1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nota1TextBox_KeyPress_1);
             // 
             // nota3TextBox
             // 
@@ -81,6 +82,7 @@
             this.nota3TextBox.Name = "nota3TextBox";
             this.nota3TextBox.Size = new System.Drawing.Size(30, 26);
             this.nota3TextBox.TabIndex = 4;
+            this.nota3TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nota1TextBox_KeyPress_1);
             // 
             // label3
             // 
@@ -97,6 +99,7 @@
             this.nota2TextBox.Name = "nota2TextBox";
             this.nota2TextBox.Size = new System.Drawing.Size(30, 26);
             this.nota2TextBox.TabIndex = 6;
+            this.nota2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nota1TextBox_KeyPress_1);
             // 
             // label4
             // 
@@ -113,6 +116,7 @@
             this.nota4TextBox.Name = "nota4TextBox";
             this.nota4TextBox.Size = new System.Drawing.Size(30, 26);
             this.nota4TextBox.TabIndex = 8;
+            this.nota4TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nota1TextBox_KeyPress_1);
             // 
             // label5
             // 
@@ -138,9 +142,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(227, 121);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 20);
+            this.label7.Size = new System.Drawing.Size(158, 20);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Ingreso de notas";
+            this.label7.Text = "Ingrese las notas: ";
             // 
             // nameTextBox
             // 
@@ -148,6 +152,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(296, 26);
             this.nameTextBox.TabIndex = 11;
+            this.nameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextBox_KeyPress);
             // 
             // calcularButton
             // 
@@ -163,11 +168,12 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // Form1
+            // PromedioEstudiantes
             // 
+            this.AcceptButton = this.calcularButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 354);
+            this.ClientSize = new System.Drawing.Size(600, 348);
             this.Controls.Add(this.calcularButton);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label7);
@@ -183,8 +189,8 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PromedioEstudiantes";
+            this.Text = "Promedio de estudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
