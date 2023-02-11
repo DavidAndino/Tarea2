@@ -61,7 +61,7 @@ namespace PromedioEstudiantes
             int nota1 = Convert.ToInt32(nota1TextBox.Text), nota2 = Convert.ToInt32(nota2TextBox.Text), nota3 = Convert.ToInt32(nota3TextBox.Text),
                 nota4 = Convert.ToInt32(nota4TextBox.Text);
           
-            //Imprimiendo resultado obtenido por  medio de un Message.Box con la llamada de la funcion asincronica
+            //Imprimiendo resultado obtenido por  medio de un Message.Box con la llamada de la funcion asincrona
             MessageBox.Show("El promedio de " + nombre + $" es {await  promedioAsync(nota1, nota2, nota3, nota4)}"+"%");
 
             resetearControles();//invocando procedimiento que limpia controles luego que el usuario obtenga un resultado
